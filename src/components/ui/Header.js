@@ -16,7 +16,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 
 function ElevationScroll(props) {
@@ -68,7 +67,10 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "50px",
     marginLeft: "50px",
     marginRight: "25px",
-    height: "45px"
+    height: "45px",
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.light
+    }
   },
   menu: {
     backgroundColor: theme.palette.common.blue,

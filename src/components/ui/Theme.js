@@ -23,12 +23,19 @@ export default createMuiTheme({
       fontWeight: "700",
       textTransform: "none",
       fontSize: "1rem"
+    },
+    estimate: {
+      fontFamily: "Montserrat",
+      fontSize: "1rem",
+      textTransform: "none",
+      color: "white"
+    },
+    h2: {
+      fontFamily: "Montserrat",
+      fontSize: "2.5rem",
+      fontWeight: 700,
+      lineHeight: 1.5,
+      color: "#115293"
     }
-  },
-  estimate: {
-    fontFamily: "Montserrat",
-    fontSize: "1rem",
-    textTransform: "none",
-    color: "white"
   }
 });
