@@ -102,6 +102,9 @@ const useStyles = makeStyles(theme => ({
   },
   drawerItemSelected: {
     opacity: 1
+  },
+  appbar: {
+    zIndex: theme.zIndex.modal + 1
   }
 }));
 
@@ -275,6 +278,7 @@ const Header = props => {
         onOpen={() => setOpenDrawer(true)}
         classes={{ paper: classes.drawer }}
       >
+        <div className={classes.toolbarMargin} />
         <List disablePadding>
           <ListItem
             onClick={() => {
@@ -401,7 +405,7 @@ const Header = props => {
   return (
     <Fragment>
       <ElevationScroll>
-        <AppBar position="fixed">
+        <AppBar position="fixed" className={classes.appbar}>
           <Toolbar disableGutters>
             <Button component={Link} to="/" onClick={() => setValue(0)}>
               <h1 className={classes.logo}>KhanDoor</h1>
