@@ -10,6 +10,9 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import customSoftwareIcon from "../../assets/Custom Software Icon.svg";
 import mobileAppsIcon from "../../assets/mobileIcon.svg";
 import websiteIcon from "../../assets/websiteIcon.svg";
+import khandoor from "../../assets/colorkhandoor.jpg";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
 
 const useStyles = makeStyles(theme => ({
   animation: {
@@ -70,6 +73,26 @@ const useStyles = makeStyles(theme => ({
     marginTop: "12em",
     [theme.breakpoints.down("sm")]: {
       padding: 25
+    }
+  },
+  khandoorBackground: {
+    backgroundImage: `url(${khandoor})`,
+    backgroundPosition: "center",
+    // backgroundSize: "cover",
+    // backgroundRepeat: "no-repeat",
+    height: "100%",
+    width: "100%"
+  },
+  khandoorCard: {
+    position: "absolute",
+    boxShadow: theme.shadows[10],
+    borderRadius: 15,
+    padding: "10em",
+    [theme.breakpoints.down("sm")]: {
+      paddingTop: "8em",
+      paddingBottom: "8em",
+      paddingLeft: "0",
+      paddingRight: "0"
     }
   }
 }));
@@ -205,9 +228,9 @@ const LandingPage = () => {
               textAlign: matchesSM ? "center" : undefined
             }}
           >
-            <Typography variant="h4">Customer Software Developement</Typography>
-            <Typography variant="subtitle1">Let's get Wild</Typography>
-            <Typography variant="subtitle1">Fortune Favors the Bold</Typography>
+            <Typography variant="h4">Website Developement</Typography>
+            <Typography variant="subtitle1">Think Differently</Typography>
+            <Typography variant="subtitle1">...and be Uinque</Typography>
             <Button variant="outlined" className={classes.learnButton}>
               <span style={{ marginRight: 10 }}>Learn More </span>
               <ButtonArrow
@@ -220,6 +243,43 @@ const LandingPage = () => {
           <Grid item>
             <img className={classes.icon} src={websiteIcon} alt="websiteIcon" />
           </Grid>
+        </Grid>
+      </Grid>
+      <Grid item>
+        <Grid
+          container
+          style={{ height: "100em", marginTop: "12em" }}
+          alignItems="center"
+          justify="center"
+        >
+          <Card className={classes.khandoorCard}>
+            <CardContent>
+              <Grid
+                container
+                direction="column"
+                style={{ textAlign: "center" }}
+              >
+                <Grid item>
+                  <Typography variant="h2" gutterBottom>
+                    Khandoors
+                  </Typography>
+                  <Typography variant="subtitle1">Seek and Survive</Typography>
+                  <Button
+                    variant="outlined"
+                    className={classes.learnButtonHero}
+                  >
+                    <span style={{ marginRight: 10 }}>Learn More </span>
+                    <ButtonArrow
+                      height={15}
+                      width={15}
+                      fill={theme.palette.common.red}
+                    />
+                  </Button>
+                </Grid>
+              </Grid>
+            </CardContent>
+          </Card>
+          <div className={classes.khandoorBackground} />
         </Grid>
       </Grid>
     </Grid>
