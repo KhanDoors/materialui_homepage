@@ -36,6 +36,31 @@ export default createMuiTheme({
       fontWeight: 700,
       lineHeight: 1.5,
       color: "#115293"
+    },
+    h3: {
+      fontFamily: "Montserrat",
+      fontSize: "2.5rem",
+      color: "#115293"
+    },
+    h4: {
+      fontFamily: "Montserrat",
+      fontSize: "1.75rem",
+      fontWeight: 700,
+      color: "#115293"
+    },
+    subtitle1: {
+      fontSize: "1.25rem",
+      fontWeight: 300,
+      color: "#9a0036"
+    },
+    learnButton: {
+      borderColor: "#115293",
+      color: "#115293",
+      borderWidth: 2,
+      textTransform: "none",
+      borderRadius: 50,
+      fontFamily: "Roboto",
+      fontWeight: "bold"
     }
   }
 });
