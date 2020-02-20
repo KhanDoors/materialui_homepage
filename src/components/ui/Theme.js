@@ -53,6 +53,11 @@ export default createMuiTheme({
       fontWeight: 300,
       color: "#9a0036"
     },
+    subtitle2: {
+      fontSize: "1.25rem",
+      fontWeight: 300,
+      color: "#9a0036"
+    },
     learnButton: {
       borderColor: "#115293",
       color: "#115293",

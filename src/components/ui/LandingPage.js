@@ -11,6 +11,7 @@ import customSoftwareIcon from "../../assets/Custom Software Icon.svg";
 import mobileAppsIcon from "../../assets/mobileIcon.svg";
 import websiteIcon from "../../assets/websiteIcon.svg";
 import khandoor from "../../assets/colorkhandoor.jpg";
+import infokhandoor from "../../assets/cowboyslogo.jpg";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 
@@ -94,6 +95,14 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: "0",
       paddingRight: "0"
     }
+  },
+  infoBackground: {
+    backgroundImage: `url(${infokhandoor})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    height: "100%",
+    width: "100%"
   }
 }));
 
@@ -280,6 +289,45 @@ const LandingPage = () => {
             </CardContent>
           </Card>
           <div className={classes.khandoorBackground} />
+        </Grid>
+      </Grid>
+      <Grid item>
+        <Grid container style={{ height: "100em" }} alignItems="center">
+          <Grid item container style={{ position: "absolute" }}>
+            <Grid item sm style={{ marginLeft: "5em" }}>
+              <Grid container direction="column">
+                <Typography variant="h2">About Us</Typography>
+                <Typography variant="subtitle2">The Deets</Typography>
+                <Grid item>
+                  <Button variant="outlined" className={classes.learnButton}>
+                    <span style={{ marginRight: 10 }}>Learn More </span>
+                    <ButtonArrow
+                      width={10}
+                      height={10}
+                      fill={theme.palette.common.blue}
+                    />
+                  </Button>
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item sm style={{ marginRight: "5em", textAlign: "right" }}>
+              <Grid container direction="column">
+                <Typography variant="h2">Contact Us</Typography>
+                <Typography variant="subtitle2">Let's get Together</Typography>
+                <Grid item>
+                  <Button variant="outlined" className={classes.learnButton}>
+                    <span style={{ marginRight: 10 }}>Learn More </span>
+                    <ButtonArrow
+                      width={10}
+                      height={10}
+                      fill={theme.palette.common.blue}
+                    />
+                  </Button>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <div className={classes.infoBackground} />
         </Grid>
       </Grid>
     </Grid>
